@@ -26,10 +26,10 @@ end
 fprintf('Distribution for %.f knots\n',nKnots);
 disp(bigKnots)
 
-% %to find mean
-% sum2 = 0;
-% for k = 1:nKnots*nCrossings
-%     sum2 = sum2 + k*twoKnots(1,k);    
-% end
-% mean2 = sum2/8^nKnots;
-% fprintf('Mean for two knots \n%f\n\n\n',mean2);
+%to find mean
+sum = 0;
+for k = 1:nKnots*nCrossings
+    sum = sum + k*bigKnots(1,k);    
+end
+mean = sum/8^nKnots;
+fprintf('Mean for nKnots \n%f\n\n\n',mean);
